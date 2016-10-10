@@ -1,12 +1,11 @@
 #pragma once
 #include <string>
 #include "monster.h"
+#include "hero.h"
 using std::string;
 string intro();
 int fightmenu();
-int endCondition(string,mob);
-mob fightengine(string,mob);
-string determineMobName(int);
-int determineMobHealth(int);
-int determineMobMana(int);
+int endCondition(hero&,mob&);
+void fightengine(hero&,mob&);
 mob makeOurMob(int);
+hero chooseHero();
