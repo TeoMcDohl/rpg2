@@ -10,7 +10,7 @@ string intro()
 	using namespace std;
 	cout << "RPG Fight Sim v.011!" << std::endl;
 	cout << "NAME YOUR HERO:  ";
-	std::getline(std::cin, heroname);
+	getline(cin, heroname);
 	cout << std::endl;
 	return heroname;
 }

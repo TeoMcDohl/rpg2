@@ -1,7 +1,5 @@
 #include "stdafx.h"
-#include <iostream>
 #include "functionloader.h"
-
 
 int fightmenu()
 {
@@ -12,7 +10,16 @@ int fightmenu()
 	cout << "2: Magic (3 MP)\n";
 	cout << endl;
 	cout << "Command? ";
-	int menuCmd;
-	cin >> menuCmd;
-	return menuCmd;
+	string menuCmd;
+	int menuCmdint;
+	getline(cin, menuCmd);
+	stringstream fightStream(menuCmd);
+	if (fightStream >> menuCmdint)
+	{
+		return menuCmdint;
+	}
+	else
+	{
+		return -1;
+	}
 }

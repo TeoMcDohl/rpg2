@@ -2,6 +2,7 @@
 #define MONSTER
 #include "stdafx.h"
 #include <string>
+#include <time.h>
 using std::string;
 
 class mob
@@ -26,6 +27,21 @@ public:
 		else if (mobID == 3)
 		{
 			mobDamage = rand() % strength + 6;
+		}
+	}
+	int chanceToHit()
+	{
+		int calcChance;
+		signed srand (time(0));
+		calcChance = rand() % 100 + 1;
+
+		if (calcChance > 30)
+		{
+			return 1;
+		}
+		else if (calcChance <= 30)
+		{
+			return 2;
 		}
 	}
 };

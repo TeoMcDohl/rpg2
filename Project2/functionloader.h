@@ -2,6 +2,10 @@
 #include <string>
 #include "monster.h"
 #include "hero.h"
+#include <sstream>
+#include <iostream>
+
+
 using std::string;
 string intro();
 int fightmenu();
