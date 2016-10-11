@@ -8,6 +8,7 @@ void fightengine(hero& player1, mob& currentMob)
 
 {
 	using namespace std;
+	cout << currentMob.mobName << " is released from its cage!\n" << std::endl;
 	while (currentMob.mobHealth >= 1 && player1.playerHealth >= 1)
 	{
 		
@@ -65,10 +66,8 @@ void fightengine(hero& player1, mob& currentMob)
 			cout << "Invalid option.  :|" << "\n" << "\n";
 		}
 
-		cout << player1.heroName << "'s health is " << player1.playerHealth << "\n";
-		cout << player1.heroName << "'s mana is " << player1.playerMana << "\n";
-		cout << currentMob.mobName << "'s health is " << currentMob.mobHealth << "\n"; 
-		cout << currentMob.mobName << "'s mana is " << currentMob.mobMana << "\n";
+		player1.displayStats();
+		currentMob.displayStats();
 		cout << "\n";
 	}
 	

@@ -154,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="character.cpp" />
+    <ClCompile Include="lobby.cpp" />
     <ClCompile Include="mob.cpp" />
     <ClCompile Include="intro.cpp" />
     <ClCompile Include="menu.cpp" />

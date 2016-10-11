@@ -3,6 +3,7 @@
 #include "stdafx.h"
 #include <string>
 #include <time.h>
+#include <iostream>
 using std::string;
 
 class hero
@@ -38,6 +39,14 @@ public:
 		{
 			return 2;
 		}
+	}
+	void displayStats()
+	{
+		using namespace std;
+		cout << heroName << "'s health is " << playerHealth << "\n";
+		cout << heroName << "'s mana is " << playerMana << "\n";
+
+		
 	}
 };
 

@@ -1,6 +1,3 @@
-// Project2.cpp : Defines the entry point for the console application.
-//
-
 #include "stdafx.h"
 #include <iostream>
 #include "hero.h"
@@ -22,13 +19,10 @@ int main()
 		player1 = chooseHero();
 	}
 	player1.heroName = heroname;
-	cout << player1.heroName << "'s health is " << player1.playerHealth << "\n";
-	cout << player1.heroName << "'s mana is " << player1.playerMana << "\n";
-	cout << currentMob.mobName << "'s health is " << currentMob.mobHealth << "\n";
-	cout << currentMob.mobName << "'s mana is " << currentMob.mobMana << "\n";
-	cout << std::endl;
-	cout << currentMob.mobName << " appears!" << std::endl;
-	fightengine(player1,currentMob);
-	endCondition(player1,currentMob);
+	lobby(player1, currentMob);
+	lobbyMenu(player1, currentMob);
+	fightengine(player1, currentMob);
+    endCondition(player1, currentMob);
+	return 0;
 }
 

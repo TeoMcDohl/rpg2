@@ -11,6 +11,11 @@ string intro()
 	cout << "RPG Fight Sim v.011!" << std::endl;
 	cout << "NAME YOUR HERO:  ";
 	getline(cin, heroname);
+	if (heroname.empty())
+	{
+		heroname = "Hero";
+		return heroname;
+	}
 	cout << std::endl;
 	return heroname;
 }

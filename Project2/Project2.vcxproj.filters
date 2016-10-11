@@ -59,5 +59,8 @@
     <ClCompile Include="mob.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lobby.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
