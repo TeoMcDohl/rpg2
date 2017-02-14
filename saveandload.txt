@@ -1,0 +1,54 @@
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+
+
+
+int main()
+{
+	using namespace std;
+	ofstream saveToFile;
+	//saveToFile.open("save.txt");
+	//saveToFile << "Test saving to a file \n";
+	//saveToFile.close();
+	ifstream readFromFile;
+	cout << "Now going to read from the file.\n";
+	readFromFile.open("save.txt");
+	string reading;
+	int readInt;
+	if (readFromFile.is_open())
+	{
+		while (getline(readFromFile, reading))
+		{
+			
+		}
+		readFromFile.close();
+	}
+	stringstream intStream(reading);
+	if (intStream >> readInt)
+	{
+		cout << "Number read from file is: " << readInt << "\n";
+	}
+	else
+	{
+		return -1;
+	}
+	cout << "Now adding 1 to the saved number of " << readInt << "\n";
+	readInt++;
+	saveToFile.open("save.txt");
+	saveToFile << readInt;
+	saveToFile.close();
+
+	string readAgain;
+	readFromFile.open("save.txt");
+	if (readFromFile.is_open())
+	{
+		while (getline(readFromFile, readAgain))
+		{
+			cout << "The new number saved in the file is  " << readAgain << "\n";
+		}
+	}
+	
+}
